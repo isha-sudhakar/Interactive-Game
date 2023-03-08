@@ -42,56 +42,52 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'You wake up in a strange place and you see a jar of blue goo near you.',
+    text: 'Welcome. This is an interactive adventure where the first choice you make in this game will determine what journey you will take. Choose carefully and proceed... if you dare.',
     options: [
       {
-        text: 'Take the goo',
-        setState: { blueGoo: true },
+        text: 'Proceed',
+        //setState: { blueGoo: true },
         nextText: 2
       },
-      {
+      /*{
         text: 'Leave the goo',
         nextText: 2
-      }
+      } */
     ]
   },
   {
     id: 2,
-    text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+    text: 'You find yourself in the middle of a forest in the dead of the night. In front of you are two pathways: One is littered by a dense array of trees and seems to lead even deeper into the forest while the other pathway is marked by instructions, unprofessionally set up and barely legible, that promise you a way to an occupied campsite. Which way are you going?',
     options: [
       {
-        text: 'Trade the goo for a sword',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
+        text: ' Go deeper into the forest',
+       // requiredState: (currentState) => currentState.blueGoo,
+       // setState: { blueGoo: false, sword: true },
         nextText: 3
       },
       {
-        text: 'Trade the goo for a shield',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
-        nextText: 3
+        text: 'Follow the Instructions',
+        //requiredState: (currentState) => currentState.blueGoo,
+        //setState: { blueGoo: false, shield: true },
+        nextText: 4
       },
       {
-        text: 'Ignore the merchant',
-        nextText: 3
+        text: 'Try and trace your way back to the entrance of the forest ',
+        nextText: 5
       }
     ]
   },
   {
     id: 3,
-    text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+    text: 'You decide to go deeper into the forest. You end up walking for what feels like an eternity. Your feet grow tired and your mind starts playing games with you. All of a sudden a man emerged from the woods.',
     options: [
       {
-        text: 'Explore the castle',
+        text: 'Tell him about your situation and ask him for help',
         nextText: 4
       },
       {
-        text: 'Find a room to sleep at in the town',
+        text: 'Walk passed him and avoid him',
         nextText: 5
-      },
-      {
-        text: 'Find some hay in a stable to sleep in',
-        nextText: 6
       }
     ]
   },
