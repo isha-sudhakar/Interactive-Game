@@ -42,7 +42,7 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'Welcome. This is an interactive adventure where the first choice you make in this game will determine what journey you will take. Choose carefully and proceed... if you dare.',
+    text: 'Welcome... This is an interactive adventure where the first choice you make in this game will determine what journey you will take. Choose carefully and proceed.',
     options: [
       {
         text: 'Proceed',
