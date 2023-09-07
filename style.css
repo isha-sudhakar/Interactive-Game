@@ -22,7 +22,7 @@
     background-color: black;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 0 5px 2px;
+    box-shadow: 0 0 2px 1px; 
     text-align: center;
     
 
@@ -41,7 +41,7 @@
   
   .btn {
     background-color:rgb(71, 12, 81);
-    border: 1px solid hsl(200, 100%, 30%);
+    border: solid 1px white;
     border-radius: 5px;
     padding: 5px 10px;
     color: white;

@@ -42,7 +42,7 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'Welcome... This is an interactive adventure where the first choice you make in this game will determine what journey you will take. Choose carefully and proceed.',
+    text: 'Welcome... This is an interactive adventure where the first choice you make will determine what journey you will take. Choose carefully.',
     options: [
       {
         text: 'Proceed',
@@ -57,7 +57,7 @@ const textNodes = [
   },
   {
     id: 2,
-    text: 'You find yourself in the middle of a forest in the dead of the night. In front of you are two pathways: One is littered by a dense array of trees and seems to lead even deeper into the forest while the other pathway is marked by instructions, unprofessionally set up and barely legible, that promise you a way to an occupied campsite. Which way are you going?',
+    text: 'You find yourself in the middle of a forest at night. In front of you are two pathways: One is littered by a dense array of trees and seems to lead even deeper into the forest while the other pathway is marked by instructions, unprofessionally set up and barely legible, that promise you a way to an occupied campsite. Which way are you going?',
     options: [
       {
         text: ' Go deeper into the forest',
@@ -79,80 +79,97 @@ const textNodes = [
   },
   {
     id: 3,
-    text: 'You decide to go deeper into the forest. You end up walking for what feels like an eternity. Your feet grow tired and your mind starts playing games with you. All of a sudden a man emerged from the woods.',
+    text: 'You decide to go deeper into the forest. You end up walking for what feels like an eternity. Your feet grow tired and your mind starts playing games with you. All of the sudden a black cat emerges from the woods.',
     options: [
       {
         text: 'Tell him about your situation and ask him for help',
-        nextText: 4
+        nextText: 6
       },
       {
-        text: 'Walk passed him and avoid him',
-        nextText: 5
-      }
-    ]
-  },
-  {
-    id: 4,
-    text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 5,
-    text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
-    options: [
-      {
-        text: 'Restart',
-        nextText: -1
-      }
-    ]
-  },
-  {
-    id: 6,
-    text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
-    options: [
-      {
-        text: 'Explore the castle',
+        text: 'Offer him food',
         nextText: 7
       }
     ]
   },
   {
-    id: 7,
-    text: 'While exploring the castle you come across a horrible monster in your path.',
+    id: 6,
+    text: "Cats cannot talk. You're met with awkward silence as he walks passed you.",
     options: [
       {
-        text: 'Try to run',
+        text: 'Follow the Cat',
         nextText: 8
       },
+      
       {
-        text: 'Attack it with your sword',
-        requiredState: (currentState) => currentState.sword,
+        text: "Pspsps at him",
         nextText: 9
-      },
-      {
-        text: 'Hide behind your shield',
-        requiredState: (currentState) => currentState.shield,
-        nextText: 10
-      },
-      {
-        text: 'Throw the blue goo at it',
-        requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11
       }
     ]
   },
   {
     id: 8,
-    text: 'Your attempts to run are in vain and the monster easily catches.',
+    text: 'You follow the cat and find yourself in front of an aged cabin',
+    options: [
+      {
+        text: 'Go inside the cabin',
+        nextText: 10
+      },
+      {
+        text: "Go back",
+        nextText: 11
+      }
+      
+    
+    ]
+  },
+  {
+    id: 9,
+    text: "You become distracted from the presence behind you as you try to get the cat's attention. The last thing you feel before blacking out was a hand on your shoulder.",
     options: [
       {
         text: 'Restart',
         nextText: -1
+      }
+    ]
+  },
+  {
+    id: 7,
+    text: 'You do not have food on you. The cat becomes uninterested and leaves ',
+    options: [
+      {
+        text: '',
+        nextText: -1
+      },
+
+      {
+        //text: 'Attack it with your sword',
+        //requiredState: (currentState) => currentState.sword,
+        nextText: 9
+      },
+      {
+        //text: 'Hide behind your shield',
+        //requiredState: (currentState) => currentState.shield,
+        nextText: 10
+      },
+     
+      {
+        //text: 'Throw the blue goo at it',
+        //requiredState: (currentState) => currentState.blueGoo,
+        nextText: 11
+      }
+    ]
+  },
+  {
+    id: 10,
+    text: '',
+    options: [
+      {
+        text: 'Restart',
+        nextText: -1
+      },
+      {
+        text: "",
+        nextText:""
       }
     ]
   },
@@ -168,7 +185,7 @@ const textNodes = [
   },
   {
     id: 10,
-    text: 'The monster laughed as you hid behind your shield and ate you.',
+    text: '',
     options: [
       {
         text: 'Restart',
@@ -178,10 +195,24 @@ const textNodes = [
   },
   {
     id: 11,
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+    text: 'You attempt to go back but keep finding yourself cooming back to the cabin. No matter which direction you take, you end up walking in a circle.',
     options: [
       {
-        text: 'Congratulations. Play Again.',
+        text: 'Keep trying to walk back',
+        nextText: 12
+      }, 
+      {
+        text: 'Go inside the cabin', 
+        nextSlide: 10
+      }
+    ]
+  },
+  {
+    id: 12,
+    text: "You feel yourself becoming abnormally more tired as you keep walking in a circle before finally passing out from exhaustion. Before you lose conciousness, you see a woman stand in front of you.",
+    options: [
+      {
+        text: "Restart",
         nextText: -1
       }
     ]
