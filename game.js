@@ -124,7 +124,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: "You become distracted from the presence behind you as you try to get the cat's attention. The last thing you feel before blacking out was a hand on your shoulder.",
+    text: "You fail to get the cat's attenion. As you try to get the cat to come back to you, you become distracted from the presence that is slowly approaching you. The last thing you feel before blacking out is a hand on your shoulder",
     options: [
       {
         text: 'Restart',
@@ -161,16 +161,21 @@ const textNodes = [
   },
   {
     id: 10,
-    text: '',
+    text: "You enter the cabin. The door behind you shuts close. You notice the cabin's worn down appearance. Despite the premise clearly being abandoned, quite a few possessions have been left behind. With the limited carrying space that you have, you decide to arm yourself with one of the things that are lying around.",
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Hammer',
+        nextText: 12
       },
       {
-        text: "",
-        nextText:""
-      }
+        text: "Heavy Duty Torch",
+        nextText: 13
+      },
+
+      {
+        text: "Swiss Army Knife",
+        nextText: 14
+      },
     ]
   },
   {
@@ -184,7 +189,7 @@ const textNodes = [
     ]
   },
   {
-    id: 10,
+    id: 12,
     text: '',
     options: [
       {
